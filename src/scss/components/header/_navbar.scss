@@ -1,0 +1,27 @@
+.navbar__list {
+  display: flex;
+  justify-content: flex-start;
+  gap: 23px;
+}
+
+.navbar__link {
+  font-size: $font-size;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: $color-black;
+  transition: 0.25s;
+  display: block;
+  padding: 10px;
+  margin-bottom: -10px;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &--first {
+    color: $color-navbar-first-link;
+    font-weight: 500;
+    margin-left: -10px;
+  }
+}
