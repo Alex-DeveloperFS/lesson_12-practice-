@@ -1,0 +1,28 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+@mixin section {
+  min-height: 356px;
+  display: flex;
+  text-align: center;
+}
+
+.about {
+  @include section;
+  background-color: $color-bg-about;
+
+&__title {
+  font-size: 32px;
+  font-weight: 500;
+  margin-top: 112px;
+  margin-bottom: 42px;
+  margin-left: 11px;
+}
+
+&__description {
+  color: $color-description;
+  line-height: 26.25px;
+  margin-left: 11px;
+  margin-bottom: 91px;
+}
+}

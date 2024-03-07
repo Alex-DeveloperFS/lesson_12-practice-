@@ -1,7 +1,20 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
 .navbar__list {
   display: flex;
   justify-content: flex-start;
   gap: 23px;
+
+  @include md {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+    display: none;
+    text-align: center;
+  }
 }
 
 .navbar__link {
@@ -15,6 +28,10 @@
   padding: 10px;
   margin-bottom: -10px;
 
+  @include md {
+    padding: 20px;
+  }
+
   &:hover {
     transform: scale(1.2);
   }
@@ -23,5 +40,10 @@
     color: $color-navbar-first-link;
     font-weight: 500;
     margin-left: -10px;
+
+    @include md {
+      margin-left: 0;
+
+    }
   }
 }
